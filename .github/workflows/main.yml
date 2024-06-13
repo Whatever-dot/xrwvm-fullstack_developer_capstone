@@ -1,7 +1,8 @@
+/*jshint esversion: 8 */
 name: 'Lint Code'
 on:
   push:
-    branches: [master, main]
+    branches: [master, main];
   pull_request:
     branches: [master, main]
 jobs:
