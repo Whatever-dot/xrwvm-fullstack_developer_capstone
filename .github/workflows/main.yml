@@ -1,3 +1,4 @@
+/*jshint esversion: 8 */
 name: 'Lint Code'
 on:
   push:
@@ -29,7 +30,6 @@ jobs:
         find . -name "*.py" -exec flake8 {} +
         echo "Linted all the python files successfully"
   lint_js:
-      /*jshint esversion: 8 */
       name: Lint JavaScript Files
       runs-on: ubuntu-latest
       steps:
