@@ -13,8 +13,9 @@ def initiate():
     car_make_instances = []
     for data in car_make_data:
         car_make_instances.append(
-            CarMake.objects.create(name=data['name'], description=data['description']))
-        
+            CarMake.objects.create(name=data['name'], 
+                                   description=data['description']))
+
     # Create CarModel instances with the corresponding CarMake instances
     car_model_data = [
       {"name": "Pathfinder", "type": "SUV",
@@ -24,7 +25,7 @@ def initiate():
       {"name": "XTRAIL", "type": "SUV",
        "year": 2023, "car_make": car_make_instances[0]},
       {"name": "A-Class", "type": "SUV",
-       "year": 2023, "car_make" :car_make_instances[1]},
+       "year": 2023, "car_make": car_make_instances[1]},
       {"name": "C-Class", "type": "SUV",
        "year": 2023, "car_make": car_make_instances[1]},
       {"name": "E-Class", "type": "SUV",
@@ -43,11 +44,10 @@ def initiate():
        "year": 2023, "car_make": car_make_instances[3]},
       {"name": "Corolla", "type": "Sedan",
        "year": 2023, "car_make": car_make_instances[4]},
-      {"name": "Camry", "type": "Sedan",
+      {"name": "Camry", "type": "Sedan", 
        "year": 2023, "car_make": car_make_instances[4]},
       {"name": "Kluger", "type": "SUV", 
-       "year": 2023, "car_make": car_make_instances[4]},
-        # Add more CarModel instances as needed
+       "year": 2023, "car_make": car_make_instances[4]}
     ]
 
     for data in car_model_data:
